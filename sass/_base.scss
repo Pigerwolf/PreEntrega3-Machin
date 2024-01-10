@@ -1,0 +1,21 @@
+$primary-color:#894ca4;
+$secondary-color:#bebebede;
+$terciary-color: #ee9b00da;
+$ff-crimson-text: "Crimson Text", serif;
+
+
+//MediaQueries
+
+    // `sm` (phones)
+    @mixin MQsmall {
+    @media (min-width: 380px) and (max-width: 619px) {@content;}};
+    
+    // `lg` (tablets)
+    @mixin  MQlarge { 
+    @media (min-width: 639px) and (max-width: 1024) {@content;}};
+    
+    // `xl` (desktops)
+    @mixin MQxlarge{
+    @media (min-width: 1000px) and (max-width: 1800px){@content;}};
+
+

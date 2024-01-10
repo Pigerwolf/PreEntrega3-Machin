@@ -2,8 +2,7 @@
   font-family: "Crimson Text", serif;
   max-width: 100%;
 }
-
-body {
+* body {
   background-image: url(../images/blurry_background.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -12,8 +11,115 @@ body {
 }
 
 .body-base {
-  padding-top: 2rem;
+  padding-top: 3rem;
   margin-left: 3%;
+}
+
+section h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: left;
+  font-size: medium;
+}
+
+.bg-light {
+  --bs-bg-opacity:0;
+}
+
+.img-box-father {
+  display: flex;
+  justify-content: space-between;
+}
+.img-box-father Img {
+  width: 125px;
+  height: 125px;
+  border-radius: 5%;
+  padding: 3px;
+  display: inline-block;
+}
+
+.content-box {
+  display: block;
+  width: 100%;
+  right: 0;
+  transform: translateY(5%);
+  border-bottom: 5px, solid #c7c7c7;
+}
+
+.content-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: rgba(249, 167, 167, 0.332);
+  width: 18%;
+  height: 75vh;
+  right: 0;
+  flex-wrap: wrap;
+}
+
+.body-box-father {
+  margin-top: 0%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.2fr 0.1fr 1fr;
+}
+.body-box-father h3 {
+  text-align: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.body-box-father h4 {
+  text-align: center;
+  grid-column: 2/1;
+  grid-row: 2/3;
+}
+
+.box-content-descripcion {
+  background-color: rgba(238, 155, 0, 0.8549019608);
+  margin-top: 48px;
+  width: 35vw;
+  border-radius: 2%;
+  max-width: 992px;
+}
+
+.box-content-descripcion:hover {
+  transform: scale(1.01);
+}
+
+.box-bestseller {
+  grid-column: 1/1;
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
+  padding-top: 1.2em;
+  gap: 2px;
+}
+.box-bestseller Img {
+  padding-bottom: 0px;
+  width: 600px;
+  height: 600px;
+  border-radius: 1%;
+}
+.box-bestseller Img:hover {
+  cursor: pointer;
+}
+@media (min-width: 380px) and (max-width: 619px) {
+  .box-bestseller Img {
+    max-height: 270px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 619px) {
+  .body-base .MediaQ {
+    border-radius: 15%;
+    overflow-y: auto;
+    text-align: center;
+    border-radius: 0;
+    margin-top: 19px;
+    height: 350px;
+  }
 }
 
 .header {
@@ -71,50 +177,6 @@ body {
   transition: 0.2s;
 }
 
-.destacado-h2 {
-  display: flex;
-  text-align: center;
-  padding-top: 5%;
-  font-size: 2rem;
-  display: block;
-}
-
-.img-box-father {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-.img-box-father Img {
-  width: 200px;
-  height: 200px;
-  border-radius: 20%;
-  display: inline-block;
-  margin: 0 auto;
-  background-color: transparent;
-}
-
-.content-box {
-  color: white;
-  display: block;
-  position: absolute;
-  font-size: 2.6rem;
-  width: 100%;
-  right: 0;
-  transform: translateY(5%);
-  border-bottom: 5px, solid #c7c7c7;
-}
-
-.content-menu {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  background-color: rgba(249, 167, 167, 0.332);
-  width: 18%;
-  height: 75vh;
-  right: 0;
-  flex-wrap: wrap;
-}
-
 #navbarSupportedContent {
   flex-direction: column !important;
   background-color: transparent;
@@ -122,78 +184,62 @@ body {
   margin: 0 !important;
 }
 
-.body-box-father {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 0.2fr 0.1fr 1fr;
+.footer {
+  background: rgba(238, 155, 0, 0.8549019608);
+  color: white;
+  font-family: "Crimson Text", serif;
 }
-.body-box-father h3 {
+.footerlista {
+  padding-top: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  list-style: none;
+}
+.footerlista a {
+  color: black;
+}
+.footerredes {
   text-align: center;
-  grid-column: 1/2;
-  grid-row: 1/2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2.5rem;
 }
-.body-box-father h4 {
+.footerredes i {
+  color: rgb(0, 0, 0);
+}
+.footerdireccion {
   text-align: center;
-  grid-column: 2/1;
-  grid-row: 2/3;
+  font-size: 1rem;
+  padding: 0.8rem;
+}
+.footercopyright {
+  width: max-content;
 }
 
-.box-content-descripcion {
-  background-color: rgba(238, 155, 0, 0.8549019608);
-  width: 35vw;
-  padding: 42px;
-  margin: 15px 25px;
-  border-radius: 15%;
-  max-width: 992px;
-}
-
-.box-content-descripcion:hover {
-  transform: scale(1.2);
+.shadow, .box-content-descripcion:hover, .box-bestseller Img:hover {
+  box-shadow: 0px 0px 2px 3px;
+  transform: scale(1.02);
   transition: all;
-  transition-duration: 0.8s;
-  box-shadow: 0px 0px 5px 3px;
-  transition: all;
-  transition-duration: 0.8s;
-}
-
-.box-bestseller {
-  grid-column: 1/1;
-  margin: 0 auto;
-  align-self: center;
-  text-align: center;
-  padding-top: 1.2em;
-  gap: 2px;
-}
-.box-bestseller Img {
-  padding-bottom: 0px;
-  width: 600px;
-  height: 600px;
-  border-radius: 20%;
-}
-.box-bestseller Img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-  box-shadow: 0px 0px 5px 3px;
-  transition: all;
-  transition-duration: 0.8s;
-}
-
-.bg-light {
-  --bs-bg-opacity:0;
+  transition-duration: 0.4s;
 }
 
 .flip-box {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 150px;
+  height: 150px;
 }
 
 /* This container is needed to position the front and back side */
 .flip-box-inner {
   width: 100%;
   height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
@@ -204,6 +250,7 @@ body {
 
 /* Position the front and back side */
 .flip-box-front, .flip-box-back {
+  z-index: 6;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -218,378 +265,10 @@ body {
 
 /* Style the back side */
 .flip-box-back {
-  background-color: #894ca4;
-  color: white;
+  background-color: rgba(238, 155, 0, 0.8549019608);
+  color: black;
+  font-size: small;
   transform: rotateY(180deg);
-  background-color: rgba(190, 190, 190, 0.8705882353);
-}
-
-@media (max-width: 575.98px) {
-  * {
-    font-family: "Crimson Text", serif;
-    max-width: 99.8%;
-    margin-left: 1px;
-  }
-  body {
-    background-image: url(../images/blurry_background.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .header {
-    margin: 1px;
-    top: 3px;
-    box-sizing: border-box;
-    height: 40px;
-    position: static;
-  }
-  .header .titulo {
-    justify-content: left;
-    text-align: left;
-    display: block;
-    background-color: #894ca4;
-    width: 100%;
-    color: rgba(190, 190, 190, 0.8705882353);
-  }
-  .header .titulo h1 {
-    margin-left: 2.5%;
-  }
-  .header .nav-bar li {
-    background-color: #894ca4;
-    border: black solid;
-    list-style: none;
-  }
-  .header .nav-bar a {
-    flex-wrap: wrap;
-    text-decoration: none;
-    transition: all 700ms ease;
-    color: rgba(190, 190, 190, 0.8705882353);
-    border-bottom: 5px solid transparent;
-  }
-  .nav-text {
-    margin-top: 0.5rem;
-  }
-  .border-radius {
-    margin: 1rem;
-    text-align: center;
-    background: #894ca4;
-  }
-  .destacado-h2 {
-    display: flex;
-    text-align: center;
-    padding-top: 2%;
-    font-size: 1.5rem;
-    display: block;
-  }
-  .img-box-father {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  .img-box-father Img {
-    width: 150px;
-    height: 16%;
-    display: inline-block;
-  }
-  .content-box {
-    color: white;
-    display: block;
-    position: absolute;
-  }
-  .content-menu {
-    display: flex;
-    flex-direction: column(1);
-    position: fixed;
-    background-color: rgba(249, 167, 167, 0.332);
-    right: 0;
-  }
-  #navbarSupportedContent {
-    flex-direction: column !important;
-    background-color: transparent;
-    margin: 0 !important;
-  }
-  .body-box-father {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1fr 0.1fr 1fr;
-  }
-  .body-box-father h3 {
-    text-align: center;
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .body-box-father h4 {
-    text-align: center;
-    grid-column: 2/1;
-    grid-row: 2/3;
-  }
-  .box-content-descripcion {
-    background-color: rgba(238, 155, 0, 0.8549019608);
-  }
-  .box-bestseller {
-    grid-column: 1/1;
-    margin: 0 auto;
-    align-self: center;
-    text-align: center;
-    padding-top: 1.2em;
-    gap: 2px;
-  }
-  .box-bestseller Img {
-    padding-bottom: 0px;
-    width: 200px;
-    height: 200px;
-  }
-  .box-bestseller Img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 5px 3px;
-    transition: all;
-    transition-duration: 0.8s;
-  }
-  .bg-light {
-    --bs-bg-opacity:0;
-  }
-  .flip-box {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-  }
-  /* This container is needed to position the front and back side */
-  .flip-box-inner {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  /* Position the front and back side */
-  .flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  /* Style the front side */
-  .flip-box-front {
-    background-color: transparent;
-    color: black;
-  }
-  /* Style the back side */
-  .flip-box-back {
-    text-align: left;
-    background-color: #894ca4;
-    color: rgb(0, 0, 0);
-    transform: rotateY(180deg);
-    background-color: rgba(190, 190, 190, 0.8705882353);
-  }
-}
-@media (max-width: 1024px) {
-  * {
-    font-family: "Crimson Text", serif;
-    max-width: 100%;
-  }
-  body {
-    background-image: url(../images/blurry_background.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .body-base {
-    padding-top: 2rem;
-    margin-left: 3%;
-  }
-  .header {
-    margin: 1px;
-    top: 3px;
-    box-sizing: border-box;
-    height: 80px;
-    position: static;
-  }
-  .header .titulo {
-    justify-content: left;
-    text-align: left;
-    display: block;
-    background-color: #894ca4;
-    width: 100%;
-    color: rgba(190, 190, 190, 0.8705882353);
-  }
-  .header .titulo h1 {
-    margin-left: 2.5%;
-  }
-  .header .nav-bar li {
-    background-color: #894ca4;
-    border: black solid;
-    list-style: none;
-  }
-  .header .nav-bar a {
-    flex-wrap: wrap;
-    text-decoration: none;
-    transition: all 700ms ease;
-    color: rgba(190, 190, 190, 0.8705882353);
-    border-bottom: 5px solid transparent;
-  }
-  .nav-text {
-    margin-top: 0.5rem;
-  }
-  .border-radius {
-    border-radius: 20%;
-    margin: 1rem;
-    text-align: center;
-    background: #894ca4;
-  }
-  .border-radius:hover {
-    box-shadow: 0px 0px 5px 3px;
-    transform: scale(1.08);
-    background-color: rgba(190, 190, 190, 0.8705882353);
-    transition: 0.4s;
-    transition-duration: 0.4;
-  }
-  .nav-bar-li:hover {
-    color: black;
-    transition: 0.2s;
-  }
-  .destacado-h2 {
-    display: flex;
-    text-align: center;
-    padding-top: 5%;
-    font-size: 2rem;
-    display: block;
-  }
-  .img-box-father {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  .img-box-father Img {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-    display: inline-block;
-    margin: 0 auto;
-    background-color: transparent;
-  }
-  .content-box {
-    color: white;
-    display: block;
-    position: absolute;
-    font-size: 2.6rem;
-    width: 100%;
-    right: 0;
-    transform: translateY(5%);
-    border-bottom: 5px, solid #c7c7c7;
-  }
-  .content-menu {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    background-color: rgba(249, 167, 167, 0.332);
-    width: 18%;
-    height: 75vh;
-    right: 0;
-    flex-wrap: wrap;
-  }
-  #navbarSupportedContent {
-    flex-direction: column !important;
-    background-color: transparent;
-    min-width: 10%;
-    margin: 0 !important;
-  }
-  .body-box-father {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 0.2fr 0.1fr 1fr;
-  }
-  .body-box-father h3 {
-    text-align: center;
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .body-box-father h4 {
-    text-align: center;
-    grid-column: 2/1;
-    grid-row: 2/3;
-  }
-  .box-content-descripcion {
-    background-color: rgba(238, 155, 0, 0.8549019608);
-    width: 35vw;
-    padding: 42px;
-    margin: 15px 25px;
-    border-radius: 15%;
-    max-width: 992px;
-  }
-  .box-content-descripcion:hover {
-    transform: scale(1.2);
-    transition: all;
-    transition-duration: 0.8s;
-    box-shadow: 0px 0px 5px 3px;
-    transition: all;
-    transition-duration: 0.8s;
-  }
-  .box-bestseller {
-    grid-column: 1/1;
-    margin: 0 auto;
-    align-self: center;
-    text-align: center;
-    padding-top: 1.2em;
-    gap: 2px;
-  }
-  .box-bestseller Img {
-    padding-bottom: 0px;
-    width: 600px;
-    height: 600px;
-    border-radius: 20%;
-  }
-  .box-bestseller Img:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-    box-shadow: 0px 0px 5px 3px;
-    transition: all;
-    transition-duration: 0.8s;
-  }
-  .bg-light {
-    --bs-bg-opacity:0;
-  }
-  .flip-box {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-  }
-  /* This container is needed to position the front and back side */
-  .flip-box-inner {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  /* Position the front and back side */
-  .flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  /* Style the front side */
-  .flip-box-front {
-    background-color: transparent;
-    color: black;
-  }
-  /* Style the back side */
-  .flip-box-back {
-    background-color: #894ca4;
-    color: white;
-    transform: rotateY(180deg);
-    background-color: rgba(190, 190, 190, 0.8705882353);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
