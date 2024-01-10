@@ -1,0 +1,756 @@
+$primary-color:#894ca4;
+$secondary-color:#bebebede;
+$terciary-color: #ee9b00da;
+$ff-crimson-text: "Crimson Text", serif;
+
+
+* {
+    font-family: $ff-crimson-text;
+    max-width: 100%;
+}
+
+body {
+    background-image: url(../images/blurry_background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+.body-base {
+    padding-top: 2rem;
+    margin-left: 3%;
+
+}
+
+.header {
+
+    margin: 1px;
+    top: 3px;
+    box-sizing: border-box;
+    height: 80px;
+    position: static;
+
+.titulo {
+
+    h1 {
+        margin-left: 2.5%;
+    }
+                justify-content: left;
+                text-align: left;
+                display: block;
+                background-color: $primary-color;
+                width: 100%;
+                color: $secondary-color;
+        
+    }
+.nav-bar{
+
+    li {
+                background-color: $primary-color;
+                border: black solid;
+                list-style: none;
+        }
+    a {
+                flex-wrap: wrap;
+                text-decoration: none;
+                transition: all 700ms ease;
+                color: $secondary-color;
+                border-bottom: 5px solid transparent;
+         }
+    }
+}
+
+.nav-text {
+
+    margin-top: 0.5rem;
+
+}
+
+.border-radius{
+    border-radius: 20%;
+    margin: 1rem;
+    text-align: center;
+    background:$primary-color;
+
+}
+
+
+.border-radius:hover {
+    box-shadow: 0px 0px 5px 3px;
+    transform: scale(1.08);
+    background-color: $secondary-color;
+    transition: 0.4s;
+    transition-duration: 0.4;
+
+}
+
+.nav-bar-li:hover {
+    color: black;
+    transition: 0.2s;
+}
+
+.destacado-h2 {
+
+    display: flex;
+    text-align:center;
+    padding-top: 5%;
+    font-size: 2rem;
+    display: block;
+}
+
+.img-box-father{
+
+display: flex;
+justify-content: space-between;
+cursor: pointer;
+    
+    Img {
+        width: 200px;
+        height: 200px;    
+        border-radius: 20%;
+        display: inline-block;
+        margin: 0 auto;
+        background-color: transparent;
+
+}
+}
+.content-box {
+
+    color: white;
+    display:block;
+    position: absolute;
+    font-size: 2.6rem;
+    width: 100%;
+    right: 0;
+    transform: translateY(5%);
+    border-bottom: 5px, solid #c7c7c7;
+}
+
+.content-menu {
+
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    background-color: rgba(249, 167, 167, 0.332);
+    width: 18%;
+    height: 75vh;
+    right: 0;
+    flex-wrap: wrap;
+}
+#navbarSupportedContent {
+    flex-direction: column!important;
+    background-color: transparent;
+    min-width: 10%;
+    margin: 0!important;
+}
+.body-box-father {
+
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 0.1fr 1fr;
+    
+    h3 {
+    text-align: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+    h4 {
+        text-align: center;
+        grid-column: 2 / 1;
+        grid-row: 2 / 3;
+    }
+}
+.box-content-descripcion {
+
+    background-color:$terciary-color;
+    width: 35vw;
+    padding: 42px;
+    margin: 15px 25px;
+    border-radius: 15%;
+    max-width:  992px;
+ }
+ .box-content-descripcion:hover {
+    transform: scale(1.2);
+    transition: all;
+    transition-duration: 0.8s;
+    box-shadow: 0px 0px 5px 3px;
+    transition: all;
+    transition-duration: 0.8s;
+} 
+
+.box-bestseller {
+
+    grid-column: 1 / 1;
+    margin: 0 auto;
+    align-self: center;
+    text-align: center;
+    padding-top: 1.2em;
+    gap: 2px;
+
+    Img {
+        padding-bottom: 0px;
+        width: 600px;
+        height: 600px;
+        border-radius: 20%;
+    }
+    Img:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        box-shadow: 0px 0px 5px 3px;
+        transition: all;
+        transition-duration: 0.8s;
+    }
+}
+
+.bg-light {
+    --bs-bg-opacity:0;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+}
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side */
+  .flip-box-front {
+    background-color: transparent;
+    color: black;
+    
+    
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: $primary-color;
+    color: white;
+    transform: rotateY(180deg);
+    background-color: $secondary-color;
+    
+  }
+
+  
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+
+    * {
+        font-family: $ff-crimson-text;
+        max-width: 99.8%;
+        margin-left: 1px;
+    }
+    
+    body {
+        background-image: url(../images/blurry_background.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment:fixed;
+        background-size: cover;
+    }
+    
+    
+    .header {
+    
+        margin: 1px;
+        top: 3px;
+        box-sizing: border-box;
+        height: 40px;
+        position: static;
+    
+    .titulo {
+    
+        h1 {
+            margin-left: 2.5%;
+        }
+                    justify-content: left;
+                    text-align: left;
+                    display: block;
+                    background-color: $primary-color;
+                    width: 100%;
+                    color: $secondary-color;
+            
+        }
+    .nav-bar{
+    
+        li {
+                    background-color: $primary-color;
+                    border: black solid;
+                    list-style: none;
+            }
+        a {
+                    flex-wrap: wrap;
+                    text-decoration: none;
+                    transition: all 700ms ease;
+                    color: $secondary-color;
+                    border-bottom: 5px solid transparent;
+             }
+        }
+    }
+    
+    .nav-text {
+    
+        margin-top: 0.5rem;
+    
+    }
+    
+    .border-radius{
+        margin: 1rem;
+        text-align: center;
+        background:$primary-color;
+    
+    }
+    .destacado-h2 {
+    
+        display: flex;
+        text-align:center;
+        padding-top: 2%;
+        font-size: 1.5rem;
+        display: block;
+    }
+    
+    .img-box-father{
+    
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+        
+        Img {
+            width: 150px;
+            height: 16%;    
+            display: inline-block;
+    
+    }
+    }
+    .content-box {
+    
+        color: white;
+        display:block;
+        position: absolute;
+    }
+    
+    .content-menu {
+    
+        display: flex;
+        flex-direction: column(1);
+        position:fixed;
+        background-color: rgba(249, 167, 167, 0.332);
+        right: 0;
+    }
+    #navbarSupportedContent {
+        flex-direction: column!important;
+        background-color: transparent;
+        margin: 0!important;
+    }
+    .body-box-father {
+    
+        display: grid; 
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:1fr 0.1fr 1fr;
+        
+        h3 {
+        text-align: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+        h4 {
+            text-align: center;
+            grid-column: 2 / 1;
+            grid-row: 2 / 3;
+        }
+    }
+    .box-content-descripcion {
+    
+        background-color:$terciary-color;
+     }
+    
+    .box-bestseller {
+    
+        grid-column: 1 / 1;
+        margin: 0 auto;
+        align-self: center;
+        text-align: center;
+        padding-top: 1.2em;
+        gap: 2px;
+    
+        Img {
+            padding-bottom: 0px;
+            width: 200px;
+            height: 200px;
+        }
+        Img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 5px 3px;
+            transition: all;
+            transition-duration: 0.8s;
+        }
+    }
+    
+    .bg-light {
+        --bs-bg-opacity:0;
+    }
+    
+    .flip-box {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+    }
+    /* This container is needed to position the front and back side */
+    .flip-box-inner {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+      
+      /* Position the front and back side */
+      .flip-box-front, .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      
+      /* Style the front side */
+      .flip-box-front {
+        background-color: transparent;
+        color: black;
+        
+        
+      }
+      
+      /* Style the back side */
+      .flip-box-back {
+        text-align:left;
+        background-color: $primary-color;
+        color: rgb(0, 0, 0);
+        transform: rotateY(180deg);
+        background-color: $secondary-color;
+        
+      }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1024px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    * {
+        font-family: $ff-crimson-text;
+        max-width: 100%;
+    }
+    
+    body {
+        background-image: url(../images/blurry_background.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment:fixed;
+        background-size: cover;
+    }
+    
+    .body-base {
+        padding-top: 2rem;
+        margin-left: 3%;
+    
+    }
+    
+    .header {
+    
+        margin: 1px;
+        top: 3px;
+        box-sizing: border-box;
+        height: 80px;
+        position: static;
+    
+    .titulo {
+    
+        h1 {
+            margin-left: 2.5%;
+        }
+                    justify-content: left;
+                    text-align: left;
+                    display: block;
+                    background-color: $primary-color;
+                    width: 100%;
+                    color: $secondary-color;
+            
+        }
+    .nav-bar{
+    
+        li {
+                    background-color: $primary-color;
+                    border: black solid;
+                    list-style: none;
+            }
+        a {
+                    flex-wrap: wrap;
+                    text-decoration: none;
+                    transition: all 700ms ease;
+                    color: $secondary-color;
+                    border-bottom: 5px solid transparent;
+             }
+        }
+    }
+    
+    .nav-text {
+    
+        margin-top: 0.5rem;
+    
+    }
+    
+    .border-radius{
+        border-radius: 20%;
+        margin: 1rem;
+        text-align: center;
+        background:$primary-color;
+    
+    }
+    
+    
+    .border-radius:hover {
+        box-shadow: 0px 0px 5px 3px;
+        transform: scale(1.08);
+        background-color: $secondary-color;
+        transition: 0.4s;
+        transition-duration: 0.4;
+    
+    }
+    
+    .nav-bar-li:hover {
+        color: black;
+        transition: 0.2s;
+    }
+    
+    .destacado-h2 {
+    
+        display: flex;
+        text-align:center;
+        padding-top: 5%;
+        font-size: 2rem;
+        display: block;
+    }
+    
+    .img-box-father{
+    
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+        
+        Img {
+            width: 200px;
+            height: 200px;    
+            border-radius: 20%;
+            display: inline-block;
+            margin: 0 auto;
+            background-color: transparent;
+    
+    }
+    }
+    .content-box {
+    
+        color: white;
+        display:block;
+        position: absolute;
+        font-size: 2.6rem;
+        width: 100%;
+        right: 0;
+        transform: translateY(5%);
+        border-bottom: 5px, solid #c7c7c7;
+    }
+    
+    .content-menu {
+    
+        display: flex;
+        flex-direction: column;
+        position:fixed;
+        background-color: rgba(249, 167, 167, 0.332);
+        width: 18%;
+        height: 75vh;
+        right: 0;
+        flex-wrap: wrap;
+    }
+    #navbarSupportedContent {
+        flex-direction: column!important;
+        background-color: transparent;
+        min-width: 10%;
+        margin: 0!important;
+    }
+    .body-box-father {
+    
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.2fr 0.1fr 1fr;
+        
+        h3 {
+        text-align: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+        h4 {
+            text-align: center;
+            grid-column: 2 / 1;
+            grid-row: 2 / 3;
+        }
+    }
+    .box-content-descripcion {
+    
+        background-color:$terciary-color;
+        width: 35vw;
+        padding: 42px;
+        margin: 15px 25px;
+        border-radius: 15%;
+        max-width:  992px;
+     }
+     .box-content-descripcion:hover {
+        transform: scale(1.2);
+        transition: all;
+        transition-duration: 0.8s;
+        box-shadow: 0px 0px 5px 3px;
+        transition: all;
+        transition-duration: 0.8s;
+    } 
+    
+    .box-bestseller {
+    
+        grid-column: 1 / 1;
+        margin: 0 auto;
+        align-self: center;
+        text-align: center;
+        padding-top: 1.2em;
+        gap: 2px;
+    
+        Img {
+            padding-bottom: 0px;
+            width: 600px;
+            height: 600px;
+            border-radius: 20%;
+        }
+        Img:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            box-shadow: 0px 0px 5px 3px;
+            transition: all;
+            transition-duration: 0.8s;
+        }
+    }
+    
+    .bg-light {
+        --bs-bg-opacity:0;
+    }
+    
+    .flip-box {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+    }
+    /* This container is needed to position the front and back side */
+    .flip-box-inner {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+      
+      /* Position the front and back side */
+      .flip-box-front, .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      
+      /* Style the front side */
+      .flip-box-front {
+        background-color: transparent;
+        color: black;
+        
+        
+      }
+      
+      /* Style the back side */
+      .flip-box-back {
+        background-color: $primary-color;
+        color: white;
+        transform: rotateY(180deg);
+        background-color: $secondary-color;
+        
+      }
+    
+}
