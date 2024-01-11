@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     font-family: $ff-crimson-text;
     max-width: 100%;
     
@@ -149,3 +150,36 @@ h3 {
         }
     }
 }
+
+.gallery_box {
+    @include MQxlarge {
+        columns: (4);
+    }
+
+    @include MQmlarge {
+        columns: (3);
+    }
+
+    @include MQlarge {
+        columns: (2);
+    }
+
+    @include MQsmall {
+        columns: (1);
+    }
+
+    columns: (4);
+    margin-top: 5%;
+    padding: 0;
+    display: flex;
+    display: inline-block;
+
+.column img {
+    
+    margin: 10px 0px 0px 50px;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+ 
+}}
