@@ -96,6 +96,16 @@ h3 {
   padding-top: 1.2em;
   gap: 2px;
 }
+@media (min-width: 639px) and (max-width: 1024) {
+  .box-bestseller Img {
+    max-height: 450px;
+  }
+}
+@media (min-width: 380px) and (max-width: 619px) {
+  .box-bestseller Img {
+    max-height: 270px;
+  }
+}
 .box-bestseller Img {
   padding-bottom: 0px;
   width: 600px;
@@ -105,11 +115,6 @@ h3 {
 .box-bestseller Img:hover {
   cursor: pointer;
 }
-@media (min-width: 380px) and (max-width: 619px) {
-  .box-bestseller Img {
-    max-height: 270px;
-  }
-}
 
 @media (min-width: 380px) and (max-width: 619px) {
   .body-base .MediaQ {
@@ -118,7 +123,7 @@ h3 {
     text-align: center;
     border-radius: 0;
     margin-top: 19px;
-    height: 350px;
+    height: 250px;
   }
 }
 
