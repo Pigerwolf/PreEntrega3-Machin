@@ -67,7 +67,8 @@
 
 #navbarSupportedContent {
     flex-direction: column!important;
-    background-color: transparent;
     min-width: 10%;
     margin: 0!important;
+    z-index: 2;
+    background-color: rgba(137, 43, 226, 0.196);
 }
