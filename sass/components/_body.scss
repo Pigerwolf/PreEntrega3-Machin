@@ -28,7 +28,7 @@ text-align: center;
 
 }
 
-h3 {
+.p_tarjetas {
     text-align: left;
     font-size:medium;
 
@@ -74,7 +74,7 @@ h3 {
         right: 0;
         flex-wrap: wrap;
     }
-    
+
     .body-box-father {
         margin-top: 0%;
         display: grid; 
@@ -150,6 +150,7 @@ h3 {
         }
     }
 }
+
 .gallery_box {
     @include MQxlarge {
         display: flex;
@@ -174,6 +175,7 @@ h3 {
     padding: 0;
     display: flex;
     display: inline-block;
+    justify-content: center;
 
 .column img {
     
