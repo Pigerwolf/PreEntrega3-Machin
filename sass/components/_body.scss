@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: $ff-crimson-text;
-    max-width: 100%;
+    max-width: 100vw;
     
     body {
         background-image: url(../images/blurry_background.png);
@@ -150,12 +150,10 @@ h3 {
         }
     }
 }
-.nav-sep {
-
-    
-}
 .gallery_box {
     @include MQxlarge {
+        display: flex;
+        align-items: center;
         columns: (4);
     }
 
