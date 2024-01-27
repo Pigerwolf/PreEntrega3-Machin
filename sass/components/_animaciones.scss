@@ -20,7 +20,7 @@
   
   /* Position the front and back side */
   .flip-box-front, .flip-box-back {
-    z-index: 6;
+
     position:absolute;
     width: 280px;
     height: 100%;
@@ -41,7 +41,7 @@
 
     background-color: $terciary-color;
     color: black;
-    font-size: small;
+    font-size: large;
     transform: rotateY(180deg);
     
   }

@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: $ff-crimson-text;
-    max-width: 100vw!important;
+    max-width: 100vw;
     
     body {
         background-image: url(../images/blurry_background.png);
@@ -19,7 +19,20 @@
 
 }
 
+label {
+    width: 90px;
+}
 
+.formulateo {
+    text-align: center;
+    margin: 3em auto;
+
+
+}
+section div h3 {
+ text-align: center;
+    margin-top: 4em;
+}
 
 section p {
 
@@ -33,14 +46,43 @@ text-align: center;
 
 }
 
+.SpDlTp {
+    margin: 70 auto;
+    display: flex;
+
+    img{
+        width: 100%;
+    }
+}
+
+.gallery_box {
+    display: block;
+}
+
 .bg-light {
     --bs-bg-opacity:0;
 }
 
+.contact_box {
+    display: flex;
+    display: block;
+    justify-content: center;
+    background-color: black;
+}
+.img--box{
 
-  
+    height: 5%;
+    margin: 45% 0%;
+} 
+
+.img--box img {
+
+    width: 90%;
+
+}
 .img-box-father{
-
+    margin: 4% 0;
+    margin-bottom: 12%;
     display: flex;
     justify-content: space-between;
         
@@ -73,7 +115,7 @@ text-align: center;
     }
 
     .body-box-father {
-        overflow-x: hidden;
+        text-align: center;
         margin-top: 0%;
         display: grid; 
         grid-template-columns: repeat(2, 1fr);
@@ -89,14 +131,54 @@ text-align: center;
             grid-column: 2 / 1;
             grid-row: 2 / 3;
         }
+        @include MQsmall {
+            grid-template-columns: repeat(1,1fr);
+        }
+        @include MQmlarge {
+            margin: 0 auto;
+            grid-template-columns: repeat(1,1fr);
+        }
+        @include MQlarge {
+            margin: 0 auto;
+            grid-template-columns: repeat(1,1fr);
+        }
+        
     }
     .box-content-descripcion {
-    
+        padding: 8em;
         background-color:$terciary-color;
-        margin-top: 48px;
-        width: 35vw;
+        margin: 20px 20px;
+        width: 75%;
         border-radius: 2%;
         max-width:  992px;
+
+        @include MQsmall {
+            margin: 20px auto;
+            width: 63%;
+            padding: 0;
+        }
+
+        @include MQmlarge {
+            margin: 0.5em auto;
+            padding: 0;
+            width: 420px;
+            height: 520px;
+            padding: 0;
+
+        }
+        @include MQlarge {
+            margin: 0.5em auto;
+            width: 320px;
+            height: 420px;
+            padding: 0;
+            overflow: scroll;
+        }
+        @include MQxlarge {
+            margin: 0 auto;
+            padding: 0;
+        }
+    
+
      }
      .box-content-descripcion:hover {
         @extend .shadow;
@@ -133,7 +215,23 @@ text-align: center;
             @extend .shadow;
         }
         }
+.gallery_body{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
 
+}
+
+.box-bestseller img {
+
+    @include MQsmall {
+        width: 85%;
+        }
+        @include MQlarge {
+            width: 85%;
+
+        }
+}
 .body-base {
 
     .MediaQ {
@@ -151,13 +249,11 @@ text-align: center;
 
 .gallery_box {
     @include MQxlarge {
-        display: flex;
-        align-items: center;
         columns: (4);
     }
 
     @include MQmlarge {
-        columns: (3);
+        columns: (2);
     }
 
     @include MQlarge {
